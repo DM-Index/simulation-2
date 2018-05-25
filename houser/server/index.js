@@ -24,7 +24,10 @@ massive(CONNECTION_STRING)
 app.use(json());
 app.use(cors());
 // ENDPOINTS
+app.get("/api/houses", controller);
+app.post("/api/house", controller);
 
+app.delete("api/house/:id");
 // LISTENER
 app.listen(port, () => {
   console.log(`Port: ${port} listening!`);

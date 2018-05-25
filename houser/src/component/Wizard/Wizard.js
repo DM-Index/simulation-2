@@ -48,11 +48,6 @@ export default class Wizard extends Component {
           onChange={this.handleChange}
           value={this.state.zipcode}
         />
-        <button className="cancel-btn">
-          {" "}
-          Cancel
-          <Link to={`/`} />
-        </button>
       </div>
     );
   }
