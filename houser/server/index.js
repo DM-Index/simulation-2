@@ -25,9 +25,35 @@ app.use(json());
 app.use(cors());
 // ENDPOINTS
 app.get("/api/houses", controller);
+// Receive: Nothing
+// Send: [
+//   {
+//     id: 1,
+//     name: 'example',
+//     address: '123 Example st',
+//     city: 'orem',
+//     state: 'ut',
+//     zip: 84320
+//   }
+// ]
 app.post("/api/house", controller);
+// Receive: req.body{
+//   name: [
+//     {
+//       //     id: 1,
+//       //     name: 'example',
+//       //     address: '123 Example st',
+//       //     city: 'orem',
+//       //     state: 'ut',
+//       //     zip: 84320
+//       //   }
+//   ]
+// }
+// Send: status 200
 
 app.delete("api/house/:id");
+// Receive: req.params.id 7
+// Send: status 200
 // LISTENER
 app.listen(port, () => {
   console.log(`Port: ${port} listening!`);

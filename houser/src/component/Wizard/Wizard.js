@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 import "./Wizard.css";
-
+// methods, handle input changes, post new house to database layer 3
 export default class Wizard extends Component {
   constructor() {
     super();
